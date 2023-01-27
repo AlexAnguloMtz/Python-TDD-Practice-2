@@ -13,7 +13,7 @@ class TestSimpleGroupingStrategy(unittest.TestCase):
         student = Student.female('Nancy')
         self.assertEqual(grouping_strategy.group_for(student), 'B')
 
-    def test_males_with_names_starting_with_N_or_following_letter_belong_to_group_B(self):
+    def test_males_with_names_starting_with_N_or_following_letter_belong_to_group_A(self):
         grouping_strategy = SimpleGroupingStrategy()
         student = Student.male('Norman')
         self.assertEqual(grouping_strategy.group_for(student), 'A')
