@@ -15,11 +15,11 @@ def ask_income():
 
 def final_message(age, monthly_income):
     return 'You should pay your taxes!' \
-        if SimpleTaxStrategy.should_pay_taxes(age, monthly_income) \
+        if SimpleTaxStrategy().should_pay_taxes(age, monthly_income) \
         else 'You don''t need to pay taxes yet'
 
 def main():
-    print(final_message(ask_age(), monthly_income))
+    print(final_message(ask_age(), ask_income()))
 
 try:
     main()
